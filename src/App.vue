@@ -29,9 +29,7 @@ import dayjs from 'dayjs'
 export default {
   name: 'App',
   data(){
-    return{
-      activeColor: 'red',
-     
+    return{   
       sec:0,
       min:0,
       hr:0,
@@ -63,9 +61,7 @@ export default {
         const today = dayjs();
             self.sec = today.format('ss')/60 * 360 ;
             self.min = today.format('mm')/60 * 360 ;
-            self.hr = today.format('hh')/12 * 360 ;
-            
-
+            self.hr = today.format('hh')/12 * 360 ;     
       }, 1000);
     },
 
@@ -74,8 +70,14 @@ export default {
 </script>
 
 <style lang="scss">
+body{
+  margin: 0;
+  padding: 0;
+  background: rgb(106, 114, 128);
+  box-sizing: border-box;
+
+}
 #app{
-    background: rgb(106, 114, 128);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 
 }
@@ -84,14 +86,14 @@ export default {
     justify-content: center;
     height: 100vh;
     align-items: center;
-    transform: rotate(270deg);
     .clock{
       background: rgb(8, 123, 177);
       width: 400px;
       height: 400px;
       border-radius: 50%;
       position: relative;
-    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+      transform: rotate(270deg);
+      box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
 
       .center{
         width: 10px;
@@ -118,7 +120,7 @@ export default {
         transform-origin: left;
         transform: translate(-0%, -50%);
         z-index: 4;
-        border-radius:0 70%  70% 0;
+        border-radius:2px ;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
 
@@ -133,7 +135,7 @@ export default {
         transform-origin: left;
         transform: translate(-0%, -50%);
         z-index: 4;
-        border-radius:0 70%  70% 0;
+        border-radius:2px ;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
 
@@ -149,7 +151,7 @@ export default {
         transform-origin: left;
         transform: translate(-0%, -50%);
         z-index: 4;
-        border-radius:0 70%  70% 0;
+        border-radius:2px ;
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 
       }
